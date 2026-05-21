@@ -1,0 +1,188 @@
+/* src/components/Navbar/Navbar.css */
+
+.nexo-navbar {
+    width: 100%;
+    height: 78px;
+    padding: 0 48px;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+
+    display: grid;
+    grid-template-columns: 220px 1fr 120px;
+    align-items: center;
+
+    background: rgba(3, 4, 8, 0.92);
+    backdrop-filter: blur(18px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* LOGO */
+.nexo-logo {
+    display: flex;
+    flex-direction: column;
+    line-height: 1;
+}
+
+.nexo-logo span {
+    font-size: 32px;
+    font-weight: 900;
+    letter-spacing: -1px;
+
+    background: linear-gradient(90deg, #00c2ff 0%, #2b7cff 45%, #ff2d95 85%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.nexo-logo small {
+    margin-top: 3px;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 5px;
+    color: #ffffff;
+}
+
+/* MENÚ CENTRAL */
+.nexo-menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 34px;
+}
+
+.nexo-menu a {
+    position: relative;
+    text-decoration: none;
+
+    font-size: 14px;
+    font-weight: 500;
+    color: #ffffff;
+
+    opacity: 0.86;
+    transition: 0.25s ease;
+}
+
+.nexo-menu a:hover {
+    opacity: 1;
+    color: #00c2ff;
+}
+
+.nexo-menu a.active {
+    color: #00c2ff;
+}
+
+.nexo-menu a.active::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -22px;
+
+    width: 100%;
+    height: 2px;
+    border-radius: 20px;
+
+    background: linear-gradient(90deg, #00c2ff, #ff2d95);
+    box-shadow: 0 0 12px rgba(0, 194, 255, 0.8);
+}
+
+/* ICONOS DERECHA */
+.nexo-icons {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 18px;
+}
+
+.cart-btn,
+.user-btn {
+    position: relative;
+    border: none;
+    background: transparent;
+    color: #ffffff;
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    opacity: 0.9;
+    transition: 0.25s ease;
+}
+
+.cart-btn:hover,
+.user-btn:hover {
+    color: #00c2ff;
+    opacity: 1;
+    transform: translateY(-1px);
+}
+
+.cart-btn span {
+    position: absolute;
+    top: -9px;
+    right: -10px;
+
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 11px;
+    font-weight: 800;
+    color: #ffffff;
+
+    background: #ff2d95;
+    box-shadow: 0 0 12px rgba(255, 45, 149, 0.8);
+}
+
+/* PARA QUE EL CONTENIDO NO QUEDE DETRÁS */
+body {
+    padding-top: 78px;
+    background: #030408;
+}
+
+/* RESPONSIVE */
+@media (max-width: 1024px) {
+    .nexo-navbar {
+        grid-template-columns: 180px 1fr 90px;
+        padding: 0 28px;
+    }
+
+    .nexo-menu {
+        gap: 20px;
+    }
+
+    .nexo-menu a {
+        font-size: 13px;
+    }
+
+    .nexo-logo span {
+        font-size: 27px;
+    }
+}
+
+@media (max-width: 768px) {
+    .nexo-navbar {
+        height: 70px;
+        grid-template-columns: 1fr auto;
+        padding: 0 22px;
+    }
+
+    .nexo-menu {
+        display: none;
+    }
+
+    .nexo-logo span {
+        font-size: 26px;
+    }
+
+    .nexo-logo small {
+        font-size: 10px;
+        letter-spacing: 4px;
+    }
+}

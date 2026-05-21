@@ -1,0 +1,181 @@
+.nexo-product-card{
+    position:relative;
+    width: 100%;
+    min-height: 520px;
+    max-width: 280px;
+    overflow: hidden;
+    border-radius: 22px;
+    background: linear-gradient(180deg,
+    rgba(18,18,22,0.95) 0%,
+    rgba(8,8,10,1) 100%
+    );
+    border: 1px solid rgba(255,255,255,0.08);
+    transition: 
+    transform 0.35s ease;
+    border: 0.35s ease
+    box-shadow 0.35s ease;
+}
+
+/* Hover*/
+.nexo-product-card:hover{
+    transform: translateY(-8px);
+    border: 1px solid rgba(0,194,255,0.25);
+    box-shadow: 
+    0 15px 40px rgba(0,0,0,0.45)
+    0 0 40px rgba(0,194,255,0.12);
+}
+
+/*badge*/
+.nexo-badge{
+    position: absolute;
+    top: 18px;
+    left: 18px;
+    padding: 6px 12px;
+    color: white;
+    font-size: 11px;
+    font-weight: 700;
+    border-radius: 999px;
+    background: linear-gradient(
+        135deg,
+        #ff2d95,
+        #ff006a
+        );
+    box-shadow: 0 0 14px rgba(255,45,149,0.35);
+}
+
+/*Favorito*/
+.nexo-favorite-btn{
+    position: absolute;
+    top: 18px;
+    right: 18px;
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.06);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    color: white;
+    backdrop-filter: blur(10px);
+    transition: 0.35s ease;
+    z-index: 5;
+}
+
+.nexo-favorite-btn:hover{
+    color: #ff2d95;
+    background: rgba(255, 45, 149, 0.12);
+    transform: scale(1.08);
+}
+
+.product-image-container{
+    width: 100%;
+    height: 270px;
+    padding: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+/*Imagen del producto*/
+.image-container{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    transition: transform 0.45s ease;
+}
+
+.nexo-product-card:hover .image-container{
+    transform: scale(1.05);
+}
+
+/*Info*/
+.product-info{
+    padding: 0 22px 22px;
+}
+
+.product-info h3{
+    color: white;
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    color: white;
+}
+
+.product-info p{
+    color: #9e9e9e;
+    font-size: 14px;
+    line-height: 1.5;
+    margin-bottom: 18px;
+}
+
+/*Precio*/
+.precio-producto{
+    font-size: 28px;
+    font-weight: 800;
+    margin-bottom: 22px;
+    background: linear-gradient(
+        90deg, #00c2ff,#27e1ff
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/*footer*/
+.product-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.stars {
+    font-size: 15px;
+    letter-spacing: 2px;
+    color: #ff2d95;
+}
+
+.stars span{
+    color: #8d8d8d;
+    letter-spacing: normal;
+    margin-left: 6px;
+    font-size: 13px;
+}
+
+/*boton carrito*/
+.cart-btn{
+    width: 52px;
+    height: 52px;
+    border: none;
+    border-radius: 16px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    background: linear-gradient(
+        135deg, #00c2ff, #ff2d95
+    );
+    transition: trasnform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.cart-btn:hover{
+    transform: translateY(-3px);
+    box-shadow: 0 8 25px rgba(255,45,149,0.35);
+}
+
+/*Responsive*/
+@media(max-width: 768px){
+    .nexo-product-card{
+        min-height: auto;
+    }
+    .product-image-container{
+        height: 220px;
+    }
+    .product-info h3{
+        font-size: 18px;
+    }
+    .precio-producto{
+        font-size: 24px;
+    }
+}

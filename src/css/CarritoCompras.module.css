@@ -1,0 +1,51 @@
+/* ICONOS DERECHA */
+.nexo-icons {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 18px;
+}
+
+.cart-btn,
+.user-btn {
+    position: relative;
+    border: none;
+    background: transparent;
+    color: #ffffff;
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    opacity: 0.9;
+    transition: 0.25s ease;
+}
+
+.cart-btn:hover,
+.user-btn:hover {
+    color: #00c2ff;
+    opacity: 1;
+    transform: translateY(-1px);
+}
+
+.cart-btn span {
+    position: absolute;
+    top: -9px;
+    right: -10px;
+
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 11px;
+    font-weight: 800;
+    color: #ffffff;
+
+    background: #ff2d95;
+    box-shadow: 0 0 12px rgba(255, 45, 149, 0.8);
+}
