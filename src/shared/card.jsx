@@ -2,6 +2,9 @@ import { Heart, ShoppingCart } from "lucide-react";
 import styles from "../css/Card.module.css";
 
 const CardComponent = ({imagen, categoria, titulo, descripcion,precio, ranking}) => {
+    
+    const descripcionCorta =  descripcion.length > 50 ? `${descripcion.slice(0, 50)}...` : descripcion;
+
     return (
         <div className={styles["nexo-product-card"]}>
             {/* BADGE */}
@@ -23,7 +26,7 @@ const CardComponent = ({imagen, categoria, titulo, descripcion,precio, ranking})
             {/* Info */}
             <div className={styles["product-info"]}>
                 <h3>{titulo}</h3>
-                <p>{descripcion}</p>
+                <p>{descripcionCorta}</p>
                 <div className={styles["precio-producto"]}>
                     ${precio} MXN
                 </div>
