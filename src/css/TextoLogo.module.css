@@ -1,0 +1,36 @@
+.nexo-logo {
+    font-size: 56px;
+    font-weight: 700;
+    font-family: 'Inter', sans-serif;
+
+    background: linear-gradient(90deg,
+            #00B8FF 0%,
+            #3B82F6 30%,
+            #8B5CF6 60%,
+            #EC4899 100%);
+
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+
+    letter-spacing: -1px;
+
+    text-shadow:
+        0 0 8px rgba(0, 184, 255, 0.15),
+        0 0 16px rgba(236, 72, 153, 0.12);
+
+    user-select: none;
+}
+
+.nexo-logo span {
+    font-size: 32px;
+    font-weight: 900;
+    letter-spacing: -1px;
+}
+
+.nexo-logo small {
+    margin-top: 3px;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 5px;
+}
