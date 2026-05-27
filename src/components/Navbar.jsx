@@ -1,28 +1,31 @@
 import styles from "../css/Navbar.module.css";
 import CarritoCompras from "./CarritoCompras";
-//import logo_nexo from '../assets/logo_nexo.png'
+import { NavLink } from "react-router-dom";
+
 const Navbar = () => {
-    return (
-        <header className={styles["nexo-navbar"]}>
-            <div className={styles["nexo-logo"]}>
-            <span>NEXO</span>
-            <small>PRINT LAB</small>
-            </div>
+  const navClass = ({ isActive }) =>
+    isActive ? `${styles.menuLink} ${styles.menuLinkActive}` : styles.menuLink;
 
-            <nav className={styles["nexo-menu"]}>
-            <a href="#inicio"> Inicio </a>
-            <a href="#servicios">Servicios</a>
-            <a className={styles.active} href="#productos">Productos</a>
-            <a href="#galeria">Galería</a>
-            <a href="#cotizador">Cotizador</a>
-            <a href="#nosotros">Nosotros</a>
-            <a href="#contacto">Contacto</a>
-            </nav>
+  return (
+    <header className={styles["nexo-navbar"]}>
+      <div className={styles["nexo-logo"]}>
+        <span>NEXO</span>
+        <small>PRINT LAB</small>
+      </div>
 
-            <CarritoCompras className={styles["cart-btn"]} />
+      <nav className={styles["nexo-menu"]}>
+        <NavLink to="/" className={navClass}>Inicio</NavLink>
+        <NavLink to="/servicios" className={navClass}>Servicios</NavLink>
+        <NavLink to="/productos" className={navClass}>Productos</NavLink>
+        <NavLink to="/galeria" className={navClass}>Galeria</NavLink>
+        <NavLink to="/cotizador" className={navClass}>Cotizador</NavLink>
+        <NavLink to="/nosotros" className={navClass}>Nosotros</NavLink>
+        <NavLink to="/contacto" className={navClass}>Contacto</NavLink>
+      </nav>
 
-        </header>
-    );
+      <CarritoCompras className={styles["cart-btn"]} />
+    </header>
+  );
 };
 
 export default Navbar;
