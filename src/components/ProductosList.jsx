@@ -1,27 +1,33 @@
+import { useState } from "react";
+import CardComponent from "../shared/card";
+import ProductosModal from "./ProductosModal";
 
-import CardComponent from '../shared/card';
-import useProductoServiceApi from '../service/ProductoServiceApi';
-
-const ProductosList = () => {
-
-    const productos = useProductoServiceApi();
+const ProductosList = ({ productos }) => {
+    const [selectedProduct, setSelectedProduct] = useState(null);
 
     return (
+        <>
+            {productos.map((producto) => (
+                <CardComponent
+                    key={producto.id}
+                    imagen={producto.image}
+                    categoria="DTF"
+                    titulo={producto.title}
+                    descripcion={producto.description}
+                    precio={producto.price}
+                    ranking={producto.rating.rate}
+                    onViewDetail={() => setSelectedProduct(producto)}
+                />
+            ))}
 
-        productos.map((producto) => (
-            <CardComponent 
-                key={producto.id} 
-                imagen={producto.image} 
-                categoria="DTF" 
-                titulo={producto.title}
-                descripcion={producto.description}
-                precio={producto.price}
-                ranking={producto.rating.rate}
-            />
-        ))
-
+            {selectedProduct && (
+                <ProductosModal
+                    producto={selectedProduct}
+                    onClose={() => setSelectedProduct(null)}
+                />
+            )}
+        </>
     );
-
-}
+};
 
 export default ProductosList;

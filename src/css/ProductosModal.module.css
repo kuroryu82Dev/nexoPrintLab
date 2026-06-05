@@ -1,0 +1,115 @@
+.modal-overlay{
+    position: fixed;
+    inset: 0;
+    z-index: 1200;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+    background: rgba(4, 8, 15, 0.78);
+    backdrop-filter: blur(14px);
+}
+
+.modal-content{
+    position: relative;
+    width: min(100%, 720px);
+    padding: 32px;
+    border-radius: 28px;
+    border: 1px solid rgba(255,255,255,0.1);
+    background: linear-gradient(180deg, rgba(20,22,30,0.98) 0%, rgba(8,10,16,0.98) 100%);
+    box-shadow: 0 24px 80px rgba(0,0,0,0.45);
+    color: white;
+}
+
+.modal-close{
+    position: absolute;
+    top: 18px;
+    right: 18px;
+    width: 40px;
+    height: 40px;
+    border: 0;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.08);
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.modal-close:hover{
+    transform: scale(1.08);
+    background: rgba(255,45,149,0.18);
+}
+
+.modal-image-wrap{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 280px;
+    margin-bottom: 20px;
+    border-radius: 22px;
+    background: radial-gradient(circle at top, rgba(0,194,255,0.18), rgba(255,255,255,0.02) 60%);
+}
+
+.modal-image{
+    max-width: 100%;
+    max-height: 280px;
+    object-fit: contain;
+}
+
+.modal-category{
+    display: inline-flex;
+    margin-bottom: 14px;
+    padding: 6px 12px;
+    border-radius: 999px;
+    background: linear-gradient(135deg, #ff2d95, #ff006a);
+    box-shadow: 0 0 14px rgba(255,45,149,0.3);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+}
+
+.modal-title{
+    margin: 0 0 14px;
+    font-size: 32px;
+    line-height: 1.1;
+}
+
+.modal-description{
+    margin: 0 0 20px;
+    color: #b7bfd1;
+    font-size: 15px;
+    line-height: 1.7;
+}
+
+.modal-price{
+    display: inline-block;
+    font-size: 30px;
+    font-weight: 800;
+    background: linear-gradient(90deg, #00c2ff, #27e1ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+@media(max-width: 768px){
+    .modal-overlay{
+        padding: 16px;
+    }
+
+    .modal-content{
+        padding: 24px 20px;
+        border-radius: 22px;
+    }
+
+    .modal-image-wrap{
+        min-height: 220px;
+    }
+
+    .modal-title{
+        font-size: 24px;
+    }
+
+    .modal-price{
+        font-size: 24px;
+    }
+}
