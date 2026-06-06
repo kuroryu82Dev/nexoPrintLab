@@ -6,7 +6,7 @@ import ProductosList from "./ProductosList";
 import useProductoServiceApi from '../service/ProductoServiceApi';
 
 const ProductosContainer = () => {
-     const productos = useProductoServiceApi();
+    const productos = useProductoServiceApi();
     return (
         <>
             <PageHeader titulo="Productos" subtitulo=" Explora nuestra línea de productos personalizados con la más alta calidad de impresión." imagen={heroImage}/>
