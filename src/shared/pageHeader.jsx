@@ -10,7 +10,7 @@ const PageHeader = ({titulo, subtitulo, imagen}) => {
             `
         }}
     >
-        <div className={style["contenido"]}>
+        <div className={`${style["contenido"]} ${style["texto-heroe"]}`}>
             <h1>{titulo}</h1>
             <p>{subtitulo}</p>
         </div>

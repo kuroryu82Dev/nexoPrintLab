@@ -1,6 +1,6 @@
 .page{
     width: 100%;
-    height: 430px;
+    height: 700px;
     margin-top: 0px;
     padding: 0 70px;
     display: flex;
@@ -16,20 +16,28 @@
     max-width: 620px;
 }
 
-/*Titulo*/
-.page h1{
-    color: white;
-    font-size: 48px;
-    font-weight: 800;
-    margin-bottom: 16px;
-    letter-spacing: -1px;
+.texto-heroe h1{
+    margin-bottom: 18px;
+    color: #f8fbff;
+    font-size: 100px;
+    font-weight: 900;
+    line-height: 1.05;
+    letter-spacing: -1.8px;
+    text-shadow: 0 0 22px rgba(0,194,255,0.22);
+    font-family: 'Poppins', sans-serif;
 }
 
-/*texto*/
-.page p{
-    color: #c7c7c7;
-    font-size: 17px;
-    line-height: 1.7;
+.texto-heroe p{
+    max-width: 58ch;
+    color: #c7d6e8;
+    font-size: 21px;
+    line-height: 1.75;
+}
+
+.texto-heroe h1::first-line{
+    background: linear-gradient(90deg, #00c2ff 0%, #27e1ff 55%, #ff2d95 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 /*Responsive*/
@@ -40,10 +48,16 @@
     }
 
     .contenido {
-        max-width: 36px;
+        max-width: 100%;
     }
 
-    .page h1 {
-        font-size: 15px;
+    .texto-heroe h1 {
+        font-size: 36px;
+        letter-spacing: -1px;
+    }
+
+    .texto-heroe p{
+        font-size: 16px;
+        line-height: 1.6;
     }
 }
