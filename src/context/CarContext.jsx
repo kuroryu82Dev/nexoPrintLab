@@ -1,19 +1,30 @@
 /* eslint-disable react-refresh/only-export-components */
-import { createContext, useState } from 'react';
+import { createContext, useState } from "react";
 
-// Crear el contexto para el carrito de compras
 export const CarContext = createContext();
 
-// Crear un proveedor para el contexto del carrito de compras
 export const CarProvider = ({ children }) => {
-
     const [car, setCar] = useState([]);
 
-    // Función para agregar un producto al carrito
+    const addToCart = (producto, cantidad = 1) => {
+        setCar((prevCar) => {
+            const existingProduct = prevCar.find((item) => item.id === producto.id);
+
+            if (existingProduct) {
+                return prevCar.map((item) =>
+                    item.id === producto.id
+                        ? { ...item, cantidad: item.cantidad + cantidad }
+                        : item
+                );
+            }
+
+            return [...prevCar, { ...producto, cantidad }];
+        });
+    };
 
     return (
-        <CarContext.Provider value={{ car, setCar }}>
+        <CarContext.Provider value={{ car, setCar, addToCart }}>
             {children}
         </CarContext.Provider>
-    )
-}
+    );
+};

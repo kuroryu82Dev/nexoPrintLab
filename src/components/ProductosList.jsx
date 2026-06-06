@@ -1,23 +1,22 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import CardComponent from "../shared/card";
 import ProductosModal from "./ProductosModal";
+import { CarContext } from "../context/CarContext";
 
 const ProductosList = ({ productos }) => {
     const [selectedProduct, setSelectedProduct] = useState(null);
-    const [modalmode, setModalMode] = useState("detail");
+    const [modalMode, setModalMode] = useState("detail");
+    const { addToCart } = useContext(CarContext);
 
-    //Manejo del cierre del modal
     const handleCloseModal = () => {
         setSelectedProduct(null);
         setModalMode("detail");
     };
 
-    //Manejo de agregar al carrito
-    const handleAddToCart = (producto) => {
-        // Lógica para agregar el producto al carrito
-        console.log(`Producto agregado al carrito: ${producto.title}`);
+    const handleAddToCart = (producto, cantidad) => {
+        addToCart(producto, cantidad);
         handleCloseModal();
-    }
+    };
 
     return (
         <>
@@ -31,11 +30,12 @@ const ProductosList = ({ productos }) => {
                     precio={producto.price}
                     ranking={producto.rating.rate}
                     onViewDetail={() => {
-                        setSelectedProduct(producto)
-                        setModalMode("detail")}}
+                        setSelectedProduct(producto);
+                        setModalMode("detail");
+                    }}
                     onOpenCart={() => {
-                        setModalMode("cart")
-                        setSelectedProduct(producto)
+                        setSelectedProduct(producto);
+                        setModalMode("cart");
                     }}
                 />
             ))}
@@ -45,7 +45,7 @@ const ProductosList = ({ productos }) => {
                     producto={selectedProduct}
                     onClose={handleCloseModal}
                     onAddToCart={handleAddToCart}
-                    mode={modalmode}
+                    mode={modalMode}
                 />
             )}
         </>
