@@ -19,6 +19,7 @@ const Navbar = () => {
         <NavLink to="/cotizador" className={navClass}>Cotizador</NavLink>
         <NavLink to="/nosotros" className={navClass}>Nosotros</NavLink>
         <NavLink to="/contacto" className={navClass}>Contacto</NavLink>
+        <NavLink to="/carrito" className={navClass}>Carrito</NavLink>
       </nav>
 
       <CarritoCompras className={styles["cart-btn"]} />

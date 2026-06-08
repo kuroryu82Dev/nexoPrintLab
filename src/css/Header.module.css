@@ -18,7 +18,9 @@
 
 .texto-heroe h1{
     margin-bottom: 18px;
-    color: #f8fbff;
+    background: linear-gradient(90deg, #00c2ff 0%, #27e1ff 55%, #ff2d95 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
     font-size: 100px;
     font-weight: 900;
     line-height: 1.05;
@@ -32,12 +34,6 @@
     color: #c7d6e8;
     font-size: 21px;
     line-height: 1.75;
-}
-
-.texto-heroe h1::first-line{
-    background: linear-gradient(90deg, #00c2ff 0%, #27e1ff 55%, #ff2d95 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
 }
 
 /*Responsive*/
