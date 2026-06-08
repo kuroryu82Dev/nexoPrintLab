@@ -22,8 +22,28 @@ export const CarProvider = ({ children }) => {
         });
     };
 
+    const updateCartQuantity = (productId, nextCantidad) => {
+        setCar((prevCar) =>
+            prevCar
+                .map((item) =>
+                    item.id === productId
+                        ? { ...item, cantidad: Math.max(1, nextCantidad) }
+                        : item
+                )
+                .filter((item) => item.cantidad > 0)
+        );
+    };
+
+    const removeFromCart = (productId) => {
+        setCar((prevCar) => prevCar.filter((item) => item.id !== productId));
+    };
+
+    const clearCart = () => {
+        setCar([]);
+    };
+
     return (
-        <CarContext.Provider value={{ car, setCar, addToCart }}>
+        <CarContext.Provider value={{ car, setCar, addToCart, updateCartQuantity, removeFromCart, clearCart }}>
             {children}
         </CarContext.Provider>
     );

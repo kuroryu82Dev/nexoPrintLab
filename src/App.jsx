@@ -6,6 +6,7 @@ import ProductosContainer from './components/ProductosContainer';
 import InicioContainer from './components/InicioContainer';
 //importar al contexto del carrito de compras
 import { CarProvider } from './context/CarContext';
+import CarritoComprasContainer from './components/CarritoComprasContainer';
 
 function App() {
   return (
@@ -19,7 +20,8 @@ function App() {
         {/* <Route path="/galeria" element={<h1 style={{ color: 'white' }}>Galeria</h1>} /> */}
         <Route path="/cotizador" element={<h1 style={{ color: 'white' }}>Cotizador</h1>} />
         <Route path="/nosotros" element={<h1 style={{ color: 'white' }}>Nosotros</h1>} />
-        <Route path="/contacto" element={<h1 style={{ color: 'white' }}>Contacto</h1>} />
+        <Route path="/contacto" element={<h1 style={{ color: 'white' }}>Contacto</h1>}/>
+        <Route path="/carrito" element={<CarritoComprasContainer />} />
       </Routes>
     </CarProvider>
     </>
