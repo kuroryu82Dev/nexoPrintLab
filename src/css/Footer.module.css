@@ -1,0 +1,73 @@
+.footer {
+    margin-top: 100px;
+    background: #090B10;
+    border-top: 1px solid rgba(255, 255, 255, .08);
+}
+.container {
+    max-width: 1400px;
+    margin: auto;
+    padding: 70px 60px;
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    gap: 60px;
+}
+.logoSection h2 {
+    font-size: 34px;
+    margin-bottom: 20px;
+    background: linear-gradient(90deg, #00C2FF, #5B7CFF, #FF2D95);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.logoSection p {
+    color: #AEB3BD;
+    line-height: 1.8;
+    margin-bottom: 25px;
+}
+.social {
+    display: flex;
+    gap: 15px;
+}
+.social a {
+    width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    text-decoration: none;
+    color: white;
+    background: #141820;
+    transition: .3s;
+}
+.social a:hover {
+    background: linear-gradient(135deg, #00C2FF, #FF2D95);
+    transform: translateY(-3px);
+}
+.container h3 {
+    color: white;
+    margin-bottom: 22px;
+    font-size: 20px;
+}
+.container ul {
+    list-style: none;
+    padding: 0;
+}
+.container li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #AEB3BD;
+    margin-bottom: 16px;
+    transition: .3s;
+    cursor: pointer;
+}
+.container li:hover {
+    color: #00C2FF;
+}
+.copy {
+    text-align: center;
+    padding: 25px;
+    border-top: 1px solid rgba(255, 255, 255, .08);
+    color: #8D939E;
+    font-size: 14px;
+}

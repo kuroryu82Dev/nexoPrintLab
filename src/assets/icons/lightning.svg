@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" fill="none">
+
+    <defs>
+
+        <linearGradient id="lightningGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+
+            <stop offset="0%" stop-color="#00C2FF"></stop>
+            <stop offset="45%" stop-color="#5B7CFF"></stop>
+            <stop offset="100%" stop-color="#FF2D95"></stop>
+
+        </linearGradient>
+
+        <filter id="glow">
+            <feGaussianBlur stdDeviation="3" result="blur"></feGaussianBlur>
+            <feMerge>
+                <feMergeNode in="blur"></feMergeNode>
+                <feMergeNode in="SourceGraphic"></feMergeNode>
+            </feMerge>
+        </filter>
+
+    </defs>
+
+    <path filter="url(#glow)" d="M70 10
+           L34 64
+           H58
+           L48 118
+           L94 50
+           H68
+           L70 10 Z" stroke="url(#lightningGradient)" stroke-width="6" stroke-linejoin="round" stroke-linecap="round" fill="none"></path>
+
+</svg>

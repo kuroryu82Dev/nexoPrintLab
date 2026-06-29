@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" fill="none">
+
+    <defs>
+
+        <linearGradient id="supportGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+
+            <stop offset="0%" stop-color="#00C2FF"></stop>
+            <stop offset="45%" stop-color="#5B7CFF"></stop>
+            <stop offset="100%" stop-color="#FF2D95"></stop>
+
+        </linearGradient>
+
+        <filter id="glow">
+            <feGaussianBlur stdDeviation="3" result="blur"></feGaussianBlur>
+            <feMerge>
+                <feMergeNode in="blur"></feMergeNode>
+                <feMergeNode in="SourceGraphic"></feMergeNode>
+            </feMerge>
+        </filter>
+
+    </defs>
+
+    <!-- Diadema -->
+
+    <path filter="url(#glow)" d="
+            M30 64
+            C30 40 46 24 64 24
+            C82 24 98 40 98 64
+        " stroke="url(#supportGradient)" stroke-width="6" stroke-linecap="round"></path>
+
+    <!-- Auricular izquierdo -->
+
+    <rect x="24" y="58" width="14" height="28" rx="7" stroke="url(#supportGradient)" stroke-width="6" filter="url(#glow)"></rect>
+
+    <!-- Auricular derecho -->
+
+    <rect x="90" y="58" width="14" height="28" rx="7" stroke="url(#supportGradient)" stroke-width="6" filter="url(#glow)"></rect>
+
+    <!-- Micrófono -->
+
+    <path filter="url(#glow)" d="
+            M97 84
+            C97 92 90 98 82 98
+
+            H72
+        " stroke="url(#supportGradient)" stroke-width="6" stroke-linecap="round"></path>
+
+</svg>

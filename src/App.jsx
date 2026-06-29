@@ -7,6 +7,7 @@ import InicioContainer from './components/InicioContainer';
 //importar al contexto del carrito de compras
 import { CarProvider } from './context/CarContext';
 import CarritoComprasContainer from './components/CarritoComprasContainer';
+import Footer from './shared/Footer';
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
         <Route path="/carrito" element={<CarritoComprasContainer />} />
       </Routes>
     </CarProvider>
+    <Footer /> 
     </>
   )
 }
