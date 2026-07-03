@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 520">
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#06131f"/>
+      <stop offset="1" stop-color="#18071a"/>
+    </linearGradient>
+    <linearGradient id="print" x1="0" x2="1">
+      <stop offset="0" stop-color="#00c2ff"/>
+      <stop offset="1" stop-color="#ff2d95"/>
+    </linearGradient>
+  </defs>
+  <rect width="640" height="520" rx="42" fill="url(#bg)"/>
+  <path d="M205 112 142 151l44 88 45-20v192h178V219l45 20 44-88-63-39-63 36H268z" fill="#f7f7fb"/>
+  <path d="M259 144h122c-7 34-28 54-61 54s-54-20-61-54z" fill="#d8dbe6"/>
+  <circle cx="320" cy="282" r="70" fill="url(#print)" opacity=".94"/>
+  <path d="M262 281c32-44 79-48 116-3-24-12-45-10-63 4-16 13-33 12-53-1z" fill="#fff" opacity=".9"/>
+  <text x="320" y="465" text-anchor="middle" fill="#d7e7f5" font-family="Arial, sans-serif" font-size="30" font-weight="700">Playera DTF</text>
+</svg>

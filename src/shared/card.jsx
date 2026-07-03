@@ -20,7 +20,11 @@ const CardComponent = ({imagen, categoria, titulo, descripcion,precio, ranking, 
 
             {/* Imagen del producto */}
             <div className={styles["product-image-container"]}>
-                <img src={imagen} alt={tituloCorto} className={styles["image-container"]}/>    
+                <img
+                    src={imagen}
+                    alt={tituloCorto}
+                    className={styles["image-container"]}
+                />
             </div>
             
 

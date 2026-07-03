@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 520">
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#071624"/>
+      <stop offset="1" stop-color="#1d0618"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" x2="1">
+      <stop offset="0" stop-color="#00c2ff"/>
+      <stop offset="1" stop-color="#ff2d95"/>
+    </linearGradient>
+  </defs>
+  <rect width="640" height="520" rx="42" fill="url(#bg)"/>
+  <path d="M162 310c18-104 91-165 183-151 76 12 119 66 135 151z" fill="#141824" stroke="#2b3242" stroke-width="8"/>
+  <path d="M408 306c80 4 127 25 150 63-75 22-148 22-221 0z" fill="url(#accent)"/>
+  <path d="M251 202c38-26 97-28 139-3" fill="none" stroke="url(#accent)" stroke-width="14" stroke-linecap="round"/>
+  <text x="320" y="292" text-anchor="middle" fill="#fff" font-family="Arial, sans-serif" font-size="44" font-weight="800">NEXO</text>
+  <text x="320" y="465" text-anchor="middle" fill="#d7e7f5" font-family="Arial, sans-serif" font-size="30" font-weight="700">Gorra Bordada</text>
+</svg>

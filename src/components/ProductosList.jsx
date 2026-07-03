@@ -28,7 +28,7 @@ const ProductosList = ({ productos }) => {
                     titulo={producto.title}
                     descripcion={producto.description}
                     precio={producto.price}
-                    ranking={producto.rating.rate}
+                    ranking={producto.rating?.rate || 0}
                     onViewDetail={() => {
                         setSelectedProduct(producto);
                         setModalMode("detail");

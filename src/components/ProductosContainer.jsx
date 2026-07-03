@@ -3,18 +3,24 @@ import styles from "../css/ProductosContainer.module.css";
 import PageHeader from "../shared/pageHeader";
 import heroImage from "../assets/headerNexo.png";
 import ProductosList from "./ProductosList";
-import useProductoServiceApi from '../service/ProductoServiceApi';
+import useProductoServiceApi from "../service/ProductoServiceApi";
 
 const ProductosContainer = () => {
-    const productos = useProductoServiceApi();
+    const { productos, loading, error } = useProductoServiceApi();
+
     return (
         <>
-            <PageHeader titulo="Productos" subtitulo=" Explora nuestra línea de productos personalizados con la más alta calidad de impresión." imagen={heroImage}/>
-            <div className={styles["productos-grid"]}>  
-                <ProductosList productos={productos}/>   
+            <PageHeader
+                titulo="Productos"
+                subtitulo=" Explora nuestra linea de productos personalizados con la mas alta calidad de impresion."
+                imagen={heroImage}
+            />
+            <div className={styles["productos-grid"]}>
+                {loading && <p className={styles["productos-message"]}>Cargando productos...</p>}
+                {error && <p className={styles["productos-message"]}>{error}</p>}
+                {!loading && !error && <ProductosList productos={productos} />}
             </div>
         </>
-        
     );
 };
 

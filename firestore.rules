@@ -1,0 +1,18 @@
+rules_version = '2';
+
+service cloud.firestore {
+  match /databases/{database}/documents {
+    match /productos/{productoId} {
+      allow read: if true;
+      allow create: if true;
+      allow update: if true;
+      allow delete: if false;
+    }
+
+    match /ordenesCompra/{ordenId} {
+      allow create: if true;
+      allow read: if true;
+      allow update, delete: if false;
+    }
+  }
+}

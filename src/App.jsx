@@ -8,6 +8,7 @@ import InicioContainer from './components/InicioContainer';
 import { CarProvider } from './context/CarContext';
 import CarritoComprasContainer from './components/CarritoComprasContainer';
 import Footer from './shared/Footer';
+import OrdenesContainer from './components/OrdenesContainer';
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
         <Route path="/nosotros" element={<h1 style={{ color: 'white' }}>Nosotros</h1>} />
         <Route path="/contacto" element={<h1 style={{ color: 'white' }}>Contacto</h1>}/>
         <Route path="/carrito" element={<CarritoComprasContainer />} />
+        <Route path="/ordenes" element={<OrdenesContainer />} />
       </Routes>
     </CarProvider>
     <Footer /> 
